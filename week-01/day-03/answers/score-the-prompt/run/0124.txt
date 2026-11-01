@@ -1,0 +1,1 @@
+{"tax_year":2023,"form":"1040","issue":"Filer requested more time to send records","amount_in_question":null,"next_action":"Granted 30 more days to submit records; follow up after the extension period ends"}

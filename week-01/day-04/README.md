@@ -1,3 +1,8 @@
-# Week 1, day 4
+# Day 4 exercises
 
-The day's notebook: [`week-01-day-04.ipynb`](week-01-day-04.ipynb)
+The day's notebook, with its reading and its exercises in the order of the slides: [`week-01-day-04.ipynb`](week-01-day-04.ipynb)
+
+1. [Commit three changes and leave the fourth out](commit-three-of-four/README.md). Commit only the changes that you asked an agent for, and keep the extractor's log out of the history. Where: the folder `~/practice/week-01/day-04/commit-three-of-four/extractor`, in VS Code. Do not use AI tools. Done when: from `extractor`, `python3 ../check.py` prints a line that starts with `Done:`. Start: [`commit-three-of-four/`](commit-three-of-four/). Answer: [`answers/commit-three-of-four/`](answers/commit-three-of-four/).
+2. [Check the remote, push, get rejected, and push again](push-after-rejection/README.md). Check where a push goes, and push again after a rejection without losing your teammate's work. Where: the folder `~/practice/week-01/day-04/push-after-rejection/extractor`, with Git. Do not use AI tools. Done when: from `extractor`, `python3 ../check.py` prints a line that starts with `Done:`. Start: [`push-after-rejection/`](push-after-rejection/). Answer: [`answers/push-after-rejection/`](answers/push-after-rejection/).
+3. [Read one change in every view, before and after](diff-views/README.md). Read a coding agent's change in each form of `git diff`, before and after you commit it. Where: the folder `~/practice/week-01/day-04/diff-views/lab`, with Git. Do not use AI tools. Done when: from `lab`, `python3 ../check.py` prints a line that starts with `Done:`. Start: [`diff-views/`](diff-views/). Answer: [`answers/diff-views/`](answers/diff-views/).
+4. [Map the modes of the coding tool you use](tool-modes/README.md). Say which kind of tool each mode of Codex is, and check what Codex did against a done-when. Where: the folder `~/practice/week-01/day-04/tool-modes/extractor`, and Codex in a terminal. Done when: from `extractor`, `python3 ../check.py` prints a line that starts with `Done:`. Start: [`tool-modes/`](tool-modes/). Answer: [`answers/tool-modes/`](answers/tool-modes/).

@@ -1,0 +1,1 @@
+{"tax_year":2022,"form":"Form 1040","issue":"Return has an unspecified discrepancy; preparer expected to call back. No specific item identified yet.","amount_in_question":null,"next_action":"Wait for the preparer's call"}

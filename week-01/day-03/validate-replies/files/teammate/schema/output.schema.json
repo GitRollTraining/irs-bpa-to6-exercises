@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Case-note extraction",
+  "type": "object",
+  "properties": {
+    "tax_year": {"type": "integer"},
+    "form": {"type": "string"},
+    "issue": {"type": "string"},
+    "amount_in_question": {"type": ["integer", "null"]},
+    "next_action": {"type": ["string", "null"]}
+  },
+  "required": ["tax_year", "form", "issue", "amount_in_question", "next_action"],
+  "additionalProperties": false
+}

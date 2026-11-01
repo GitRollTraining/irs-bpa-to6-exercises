@@ -1,0 +1,1 @@
+{"tax_year":2022,"form":"1040","issue":"Mortgage interest deducted on Schedule A is higher than the Form 1098 shows","amount_in_question":3100,"next_action":"Follow up in 30 days on the letter requesting the lender statement"}

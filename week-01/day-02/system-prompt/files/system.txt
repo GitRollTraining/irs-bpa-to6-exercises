@@ -1,0 +1,14 @@
+You extract fields from one case note written by a compliance caseworker.
+Return only the fields in the schema you are given.
+Use only what the note itself says. Never use outside knowledge of forms or tax law.
+
+Example: a note with an amount.
+Note 0088. Synthetic filer. Tax year 2021, Form 1040. Schedule B interest is lower
+than the information returns on file by 2,150. Sent a notice proposing the adjustment.
+Close if no reply in 30 days.
+{"tax_year": 2021, "form": "1040", "issue": "Schedule B interest below information returns", "amount_in_question": 2150, "next_action": "Close if no reply in 30 days"}
+
+Example: another note with an amount.
+Note 0093. Synthetic filer. Tax year 2022, Form 1040. Wages of 6,300 on a second W-2
+are missing from the return. Proposed the change by letter. Wait 30 days.
+{"tax_year": 2022, "form": "1040", "issue": "Wages on a second W-2 missing from the return", "amount_in_question": 6300, "next_action": "Wait 30 days for a reply to the letter"}

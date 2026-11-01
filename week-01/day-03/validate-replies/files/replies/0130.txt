@@ -1,0 +1,1 @@
+{"tax_year":2203,"form":"1040","issue":"Self-employment tax not computed on Schedule C net profit","amount_in_question":26300,"next_action":"Wait 30 days for a reply to the letter"}

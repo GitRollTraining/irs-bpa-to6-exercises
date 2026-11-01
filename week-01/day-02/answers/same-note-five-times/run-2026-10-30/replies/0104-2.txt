@@ -1,0 +1,9 @@
+```json
+{
+  "tax_year": 2023,
+  "form": "1040",
+  "issue": "Dependent claimed on this return also appears on another return for the same tax year (duplicate dependent claim).",
+  "amount_in_question": null,
+  "next_action": "Request proof of residency for the claimed dependent. Follow up in 45 days."
+}
+```

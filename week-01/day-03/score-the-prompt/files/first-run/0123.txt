@@ -1,0 +1,1 @@
+{"tax_year":2021,"form":"Form 1041","issue":"Distributions to beneficiaries deducted twice, once on the return and once in an attached schedule","amount_in_question":14200,"next_action":"Asked the fiduciary to explain; review on reply"}

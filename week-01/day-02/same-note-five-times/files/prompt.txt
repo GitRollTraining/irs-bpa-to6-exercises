@@ -1,0 +1,2 @@
+Read the case note and return its fields as one JSON object with exactly these keys:
+tax_year, form, issue, amount_in_question, next_action.

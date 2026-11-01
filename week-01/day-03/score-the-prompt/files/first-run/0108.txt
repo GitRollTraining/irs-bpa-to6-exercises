@@ -1,0 +1,1 @@
+{"tax_year":2023,"form":"Form 1065","issue":"Partner's share of loss exceeds the basis shown on the K-1","amount_in_question":22500,"next_action":"Review the partner's basis worksheet on receipt (requested from the partner)"}

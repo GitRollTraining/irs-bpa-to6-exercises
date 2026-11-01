@@ -1,0 +1,8 @@
+Goal: add an output schema for the case-notes extractor, and tests that validate outputs
+against it.
+Context: read notes/README.md and notes/0147.txt; the five fields are in docs/fields.md.
+Constraints: tax_year is an integer; form and issue and next_action are strings;
+amount_in_question is an integer or null, and is always present. Do not call any model. Do
+not edit anything outside schema/ and tests/. Do not log note text.
+Done-when: pytest tests/test_schema.py passes; it includes one output that must fail
+(amount_in_question missing) and one that must pass with amount_in_question null.

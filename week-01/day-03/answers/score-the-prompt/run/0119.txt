@@ -1,0 +1,1 @@
+{"tax_year":2022,"form":"1120-S","issue":"Shareholder loans recorded as expenses","amount_in_question":null,"next_action":"Await the general ledger, which has been requested, to determine the amount"}

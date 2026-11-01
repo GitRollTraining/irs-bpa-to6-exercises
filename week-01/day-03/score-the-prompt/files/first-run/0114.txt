@@ -1,0 +1,1 @@
+{"tax_year":2023,"form":"Form 940","issue":"State unemployment credit taken in full although the state is a credit reduction state","amount_in_question":1050,"next_action":"Send the notice"}

@@ -1,0 +1,1 @@
+{"tax_year":2023,"form":"1040","issue":"Refund of 3,420 already issued; a second W-2 shows 11,000 in additional wages. Change proposed.","amount_in_question":11000,"next_action":"Follow up in 30 days"}

@@ -1,0 +1,112 @@
+diff --git a/README.md b/README.md
+index 2032824..5a8fda1 100644
+--- a/README.md
++++ b/README.md
+@@ -8,5 +8,6 @@ its fields as JSON that a later program can rely on, and a way to find out how o
+ | `notes/` | the lab's simulated case notes, one per file; `notes/README.md` says what they are |
+ | `docs/fields.md` | the five fields the extractor returns, and the rule for each |
+ | `model.py`, `model-route.json` | the route to the model the extractor calls, supplied by the course team; not edited in the lab |
++| `logs/` | the extractor's log: one line for each reply that fails its check, with the note's number only |
+ 
+ Everything in this repository is made up for the course. No note describes a real person or return.
+diff --git a/extractor.py b/extractor.py
+index 2686adf..341ba8c 100644
+--- a/extractor.py
++++ b/extractor.py
+@@ -4,10 +4,12 @@
+ 
+ prints the fields as JSON, or the reason the model's reply failed its check. The model is reached
+ through model.py; the tests pass in a recorded reply instead, so they never call the model. A reply
+-that fails its check is reported as a failure and never repaired.
++that fails its check is reported as a failure and never repaired. Each failure also gets one line in
++logs/extractor.log: the note's number, never its text.
+ """
+ import json
+ import pathlib
++import re
+ import sys
+ 
+ import jsonschema
+@@ -15,12 +17,24 @@ import jsonschema
+ ROOT = pathlib.Path(__file__).resolve().parent
+ SCHEMA = json.loads((ROOT / "schema" / "output.schema.json").read_text())
+ SYSTEM_PROMPT = (ROOT / "prompts" / "system.txt").read_text()
++LOG_FILE = ROOT / "logs" / "extractor.log"
+ 
+ 
+ class ExtractionFailed(Exception):
+     """The model's reply was not JSON that matches the output schema."""
+ 
+ 
++def note_number(note_text):
++    found = re.match(r"\s*Note (\d+)", note_text)
++    return found[1] if found else "unknown"
++
++
++def log_failure(note_text):
++    LOG_FILE.parent.mkdir(exist_ok=True)
++    with open(LOG_FILE, "a") as log:
++        log.write(f"note {note_number(note_text)}: the reply failed its check\n")
++
++
+ def check_reply(reply_text):
+     try:
+         fields = json.loads(reply_text)
+@@ -36,7 +50,11 @@ def extract(note_text, ask=None):
+     if ask is None:
+         from model import ask
+     reply = ask(SYSTEM_PROMPT, f"<note>{note_text.strip()}</note>", SCHEMA)
+-    return check_reply(reply)
++    try:
++        return check_reply(reply)
++    except ExtractionFailed:
++        log_failure(note_text)
++        raise
+ 
+ 
+ def main():
+diff --git a/model.py b/model.py
+index f5c44ce..e565761 100644
+--- a/model.py
++++ b/model.py
+@@ -132,6 +132,8 @@ FUNCTION_ROUTES = {"claude-code": _claude_code_functions}
+ 
+ 
+ def ask(system_prompt, note_text, schema=None, model=None, functions=None):
++    pathlib.Path("logs").mkdir(exist_ok=True)
++    print(note_text, file=open("logs/extractor.log", "a"))
+     route = _route()
+     if functions is not None:
+         return FUNCTION_ROUTES[route["route"]](system_prompt, note_text, functions, model or route["model"])
+diff --git a/tests/test_extractor.py b/tests/test_extractor.py
+index e34891e..51a07e0 100644
+--- a/tests/test_extractor.py
++++ b/tests/test_extractor.py
+@@ -7,9 +7,17 @@ import pytest
+ 
+ ROOT = pathlib.Path(__file__).resolve().parents[1]
+ sys.path.insert(0, str(ROOT))
++import extractor  # noqa: E402
+ from extractor import ExtractionFailed, extract  # noqa: E402
+ 
+ 
++@pytest.fixture(autouse=True)
++def log_file(tmp_path, monkeypatch):
++    """Each test logs into its own folder, never into logs/."""
++    monkeypatch.setattr(extractor, "LOG_FILE", tmp_path / "extractor.log")
++    return tmp_path / "extractor.log"
++
++
+ def note(number):
+     return (ROOT / "notes" / f"{number}.txt").read_text()
+ 
+@@ -52,3 +60,9 @@ def test_reply_missing_amount_is_a_failure():
+ def test_reply_that_is_not_json_is_a_failure():
+     with pytest.raises(ExtractionFailed):
+         extract(note("0147"), ask=lambda system_prompt, note_text, schema=None: "Here are the fields: ...")
++
++
++def test_failure_is_logged_by_note_number_only(log_file):
++    with pytest.raises(ExtractionFailed):
++        extract(note("0147"), ask=lambda system_prompt, note_text, schema=None: "Here are the fields: ...")
++    assert log_file.read_text() == "note 0147: the reply failed its check\n"

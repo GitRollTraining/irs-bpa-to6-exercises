@@ -1,0 +1,6 @@
+Goal: add the extractor, extractor.py.
+Its function sends one note to the model and returns the note's five fields as JSON.
+Add tests for the function in tests/test_extractor.py.
+Context: read model.py, prompts/system.txt and schema/output.schema.json. The tests use the replies in tests/recorded/.
+Constraints: The tests call no model. Do not edit anything outside extractor.py and tests/test_extractor.py. Do not log note text.
+Done-when: pytest tests/test_extractor.py passes. It includes one reply that must fail (amount_in_question missing) and note 0102, for which the function must return amount_in_question null.

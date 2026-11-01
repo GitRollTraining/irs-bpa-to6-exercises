@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Case-note extraction",
+  "description": "One extractor result per note: exactly the five fields in docs/fields.md.",
+  "type": "object",
+  "properties": {
+    "tax_year": {
+      "type": "integer",
+      "description": "The tax year the note names, such as 2023."
+    },
+    "form": {
+      "type": "string",
+      "description": "The form number only, such as \"1040\", without the word \"Form\"."
+    },
+    "issue": {
+      "type": "string",
+      "description": "What looked wrong, in a short phrase of the note's own words."
+    },
+    "amount_in_question": {
+      "type": ["integer", "null"],
+      "description": "The amount the note names as in question, in whole dollars; null when the note names no amount."
+    },
+    "next_action": {
+      "type": "string",
+      "description": "What happens next, as the note says it."
+    }
+  },
+  "required": ["tax_year", "form", "issue", "amount_in_question", "next_action"],
+  "additionalProperties": false
+}

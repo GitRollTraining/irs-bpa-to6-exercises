@@ -1,0 +1,7 @@
+
+
+def test_reply_with_amount_as_text_is_a_failure():
+    fields = json.loads((ROOT / "tests" / "recorded" / "0147.json").read_text())
+    fields["amount_in_question"] = "18,400"
+    with pytest.raises(ExtractionFailed):
+        extract(note("0147"), ask=lambda system_prompt, note_text, schema=None: json.dumps(fields))

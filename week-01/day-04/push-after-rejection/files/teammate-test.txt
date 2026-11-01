@@ -1,0 +1,17 @@
+"""The extractor's own checks, after the schema. It calls no model."""
+import json
+import pathlib
+import sys
+
+import pytest
+
+ROOT = pathlib.Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from extractor import ExtractionFailed, check_reply  # noqa: E402
+
+
+def test_form_with_the_word_form_is_a_failure():
+    reply = json.loads((ROOT / "tests" / "recorded" / "0147.json").read_text())
+    reply["form"] = "Form 1040"
+    with pytest.raises(ExtractionFailed):
+        check_reply(json.dumps(reply))

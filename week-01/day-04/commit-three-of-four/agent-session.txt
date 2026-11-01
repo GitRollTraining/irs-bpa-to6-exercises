@@ -1,0 +1,13 @@
+What you asked the coding agent, and what it reported. The course made up this session.
+
+You asked:
+  Log each reply that fails its check in logs/extractor.log.
+  Write the note's number only, never its text.
+  Add a test for it.
+  In README.md, say what the log holds.
+
+The agent reported:
+  Done. The function extract now logs each failed reply by its note number.
+  I added a test, and a row for logs/ in README.md.
+  I ran the extractor once, on note 0104. Its reply failed its check.
+  All 11 tests pass.

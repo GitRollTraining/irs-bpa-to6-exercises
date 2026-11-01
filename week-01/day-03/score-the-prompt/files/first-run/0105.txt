@@ -1,0 +1,1 @@
+{"tax_year":2022,"form":"Form 1120","issue":"Officer compensation appears low relative to 95,000 in distributions taken in the same year; 40,000 of those distributions may be wages","amount_in_question":40000,"next_action":"Reasonable-compensation review opened; schedule a call with the preparer"}
