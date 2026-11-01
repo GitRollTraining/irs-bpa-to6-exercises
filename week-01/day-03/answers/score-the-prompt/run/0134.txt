@@ -1,0 +1,1 @@
+{"tax_year":2023,"form":"1040","issue":"Filer disputes the proposed change and has sent new records","amount_in_question":null,"next_action":"Read the new records the filer sent, then decide on the proposed change; review this week"}

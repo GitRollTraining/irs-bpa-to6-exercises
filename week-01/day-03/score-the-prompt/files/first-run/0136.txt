@@ -1,0 +1,1 @@
+{"tax_year":2023,"form":"Form 990","issue":"Gross receipts suggest the organization filed the short form when it should have filed the full return","amount_in_question":null,"next_action":"Review financial statements on receipt (requested from the organization)"}

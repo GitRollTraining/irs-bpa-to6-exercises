@@ -1,0 +1,20 @@
+{"note": "0102", "tax_year": 2023, "form": "1040", "issue": "Charitable gift on Schedule A without written acknowledgment", "amount_in_question": null, "next_action": "Review the receipt when it arrives"}
+{"note": "0103", "tax_year": 2021, "form": "941", "issue": "Federal tax deposits made late", "amount_in_question": 6800, "next_action": "Send the penalty explanation letter"}
+{"note": "0104", "tax_year": 2023, "form": "1040", "issue": "Dependent also claimed on another return", "amount_in_question": null, "next_action": "Request proof of residency and follow up in 45 days"}
+{"note": "0105", "tax_year": 2022, "form": "1120", "issue": "Officer compensation low against distributions", "amount_in_question": 40000, "next_action": "Schedule a call with the preparer"}
+{"note": "0108", "tax_year": 2023, "form": "1065", "issue": "Partner's loss exceeds the basis on the K-1", "amount_in_question": 22500, "next_action": "Review the basis worksheet on receipt"}
+{"note": "0109", "tax_year": 2022, "form": "1040", "issue": "Mortgage interest deduction above Form 1098", "amount_in_question": 3100, "next_action": "Follow up on the lender statement in 30 days"}
+{"note": "0110", "tax_year": 2023, "form": "1040", "issue": "Filer says the notice issue is already resolved", "amount_in_question": null, "next_action": "Pull the account transcript and call back"}
+{"note": "0114", "tax_year": 2023, "form": "940", "issue": "Full state unemployment credit in a credit reduction state", "amount_in_question": 1050, "next_action": "Send the notice"}
+{"note": "0119", "tax_year": 2022, "form": "1120-S", "issue": "Shareholder loans recorded as expenses", "amount_in_question": null, "next_action": "Request the general ledger"}
+{"note": "0122", "tax_year": 2023, "form": "1040", "issue": "Schedule C gross receipts below the 1099-K total", "amount_in_question": 7500, "next_action": "Follow up on the sales records in 30 days"}
+{"note": "0123", "tax_year": 2021, "form": "1041", "issue": "Distributions to beneficiaries deducted twice", "amount_in_question": 14200, "next_action": "Review the fiduciary's reply"}
+{"note": "0124", "tax_year": 2023, "form": "1040", "issue": "Filer asked for more time to send records", "amount_in_question": null, "next_action": "Follow up after the 30-day extension"}
+{"note": "0126", "tax_year": 2023, "form": "W-2", "issue": "W-2 total does not match the Form 941 wages", "amount_in_question": 3900, "next_action": "Follow up on the reconciliation request in 60 days"}
+{"note": "0128", "tax_year": 2023, "form": "1040", "issue": "Alimony deduction under a divorce agreement after 2018", "amount_in_question": 18000, "next_action": "Close in 30 days if no reply"}
+{"note": "0134", "tax_year": 2023, "form": "1040", "issue": "Filer disputes the proposed change and sent records", "amount_in_question": null, "next_action": "Review the new records this week"}
+{"note": "0136", "tax_year": 2023, "form": "990", "issue": "Exempt organization filed the short form instead of the full return", "amount_in_question": null, "next_action": "Review the financial statements on receipt"}
+{"note": "0137", "tax_year": 2023, "form": "1040", "issue": "Same retirement contribution deducted in two years", "amount_in_question": 4000, "next_action": "Send a letter about both years"}
+{"note": "0138", "tax_year": 2022, "form": "1040", "issue": "Unspecified discrepancy, preparer to call back", "amount_in_question": null, "next_action": "Wait for the preparer's call"}
+{"note": "0139", "tax_year": 2023, "form": "1040", "issue": "Second W-2 shows wages not on the return", "amount_in_question": 11000, "next_action": "Follow up on the proposed change in 30 days"}
+{"note": "0147", "tax_year": 2023, "form": "1040", "issue": "Schedule C gross receipts below information returns", "amount_in_question": 18400, "next_action": "Follow up on records request in 30 days"}

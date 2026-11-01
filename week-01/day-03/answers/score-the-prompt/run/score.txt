@@ -1,0 +1,10 @@
+Run 2 of the set: 20 labelled notes. Replies that fail the schema: 0.
+The scorer does not compare issue and next_action, which are phrases that a person reads.
+
+field                 correct  extracted  expected  precision  recall
+tax_year                   20         20        20       1.00    1.00
+form                       20         20        20       1.00    1.00
+amount_in_question         12         12        12       1.00    1.00
+
+Wrong values (the note: its label, then the reply):
+  none

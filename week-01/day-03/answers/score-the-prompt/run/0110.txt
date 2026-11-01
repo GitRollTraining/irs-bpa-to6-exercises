@@ -1,0 +1,1 @@
+{"tax_year":2023,"form":"1040","issue":"Filer called about a notice and says the issue is already resolved; nothing to verify yet","amount_in_question":null,"next_action":"Pull the account transcript and call the filer back"}

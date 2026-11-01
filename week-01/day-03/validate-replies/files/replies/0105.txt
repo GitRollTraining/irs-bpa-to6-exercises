@@ -1,0 +1,1 @@
+{"tax_year":2022,"form":"1120","issue":"Officer compensation low against distributions","amount_in_question":"40,000 of 95,000","next_action":"Schedule a call with the preparer"}

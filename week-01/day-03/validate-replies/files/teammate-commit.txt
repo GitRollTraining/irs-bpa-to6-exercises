@@ -1,0 +1,6 @@
+Count fewer replies as failures
+
+count_failures.py counted 5 of the 8 replies as failures. Now it counts 2.
+
+- The schema lets next_action be null, as it lets amount_in_question be null.
+- check_reply repairs an amount that the model writes as text.

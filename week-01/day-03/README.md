@@ -1,3 +1,7 @@
-# Week 1, day 3
+# Day 3 exercises
 
-The day's notebook: [`week-01-day-03.ipynb`](week-01-day-03.ipynb)
+The day's notebook, with its reading and its exercises in the order of the slides: [`week-01-day-03.ipynb`](week-01-day-03.ipynb)
+
+1. [Check replies against a schema and your own check](validate-replies/README.md). Check each reply against the schema and your own check, and count a bad reply as a failure. Where: the folder `~/practice/week-01/day-03/validate-replies/lab`, in VS Code. Do not use AI tools. Done when: from `lab`, `python3 ../check.py` prints a line that starts with `Done:`. Start: [`validate-replies/`](validate-replies/). Answer: [`answers/validate-replies/`](answers/validate-replies/).
+2. [Define one function, and test both cases](define-a-function/README.md). Describe a function for the model, and test it where a call is right and where none is. Where: the folder `~/practice/week-01/day-03/define-a-function/lab`, in the day's notebook or in a terminal. `ask.py` calls the model that the extractor calls. Use no other AI tool. Done when: from `lab`, `python3 ../check.py` prints a line that starts with `Done:`. Start: [`define-a-function/`](define-a-function/). Answer: [`answers/define-a-function/`](answers/define-a-function/).
+3. [Score the prompt on a labelled set, and revise it once](score-the-prompt/README.md). Score a prompt per field on a labelled set, and revise it on one failure. Where: the folder `~/practice/week-01/day-03/score-the-prompt/extractor`, in VS Code. The scorer sends the 20 notes to the model, one call each, for each new version of your prompt. Use no other AI tool. Done when: from `extractor`, `python3 ../check.py` prints a line that starts with `Done:`. Start: [`score-the-prompt/`](score-the-prompt/). Answer: [`answers/score-the-prompt/`](answers/score-the-prompt/).

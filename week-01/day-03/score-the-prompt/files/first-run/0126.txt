@@ -1,0 +1,1 @@
+{"tax_year":2023,"form":"Form W-2","issue":"Employer's W-2 total does not match the Form 941 wages for the year","amount_in_question":3900,"next_action":"Follow up in 60 days on the reconciliation request sent to the employer"}

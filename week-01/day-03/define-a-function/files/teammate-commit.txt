@@ -1,0 +1,1 @@
+Add a helper for caseworkers' questions: the model can ask for the functions in functions.json

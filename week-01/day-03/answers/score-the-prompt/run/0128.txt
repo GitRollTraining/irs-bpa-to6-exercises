@@ -1,0 +1,1 @@
+{"tax_year":2023,"form":"1040","issue":"Alimony deduction claimed under a divorce agreement dated after 2018 was disallowed","amount_in_question":18000,"next_action":"Explanation sent; close in 30 days if no reply"}

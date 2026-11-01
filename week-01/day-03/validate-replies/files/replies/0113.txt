@@ -1,0 +1,1 @@
+{"tax_year":2022,"form":"1040","issue":"Schedule C car expenses have no mileage log","amount_in_question":9700,"next_action":"Review in 30
