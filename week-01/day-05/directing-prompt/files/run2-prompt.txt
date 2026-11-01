@@ -1,0 +1,6 @@
+Goal: add the extractor, extractor.py.
+Its function sends one note to the model and returns the note's five fields as JSON.
+Add tests for the function in tests/test_extractor.py.
+Context:
+Constraints:
+Done-when:
