@@ -1,0 +1,2 @@
+    if fields["form"].strip().lower().startswith("form"):
+        raise ExtractionFailed(f'the form is "{fields["form"]}": write the number only (docs/fields.md)')

@@ -1,0 +1,9 @@
+diff --git a/README.md b/README.md
+index 2032824..f79c856 100644
+--- a/README.md
++++ b/README.md
+@@ -10,3 +10,4 @@ its fields as JSON that a later program can rely on, and a way to find out how o
+ | `model.py`, `model-route.json` | the route to the model the extractor calls, supplied by the course team; not edited in the lab |
+ 
+ Everything in this repository is made up for the course. No note describes a real person or return.
++The data-rules check passed before any AI tool ran here.
