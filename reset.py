@@ -1,8 +1,9 @@
 """Put one exercise folder back as it was supplied: python3 reset.py <folder>
 
-The supplied state is the commit tagged `start`. Your changes in that folder are replaced, not
-repaired; no other folder is touched. A folder whose starting state is a Git repository of its own
-holds start.py, which this runs to build that repository again.
+The supplied state is the commit tagged `start` (for a day added after you cloned, the latest
+commit). Your changes in that folder are replaced, not repaired; no other folder is touched. A
+folder whose starting state is a Git repository of its own holds start.py, which this runs to build
+that repository again.
 """
 import pathlib
 import subprocess
@@ -19,8 +20,12 @@ if len(sys.argv) != 2 or sys.argv[1] not in folders:
     print("Usage: python3 reset.py <folder>, one of: " + ", ".join(folders))
     sys.exit(1)
 folder = sys.argv[1]
-subprocess.run(["git", "-C", str(KIT), "restore", "--source=start", "--staged", "--worktree",
-                "--", places[folder]], check=True)
+# A day added after you cloned is not in the commit tagged `start`; its folder comes back as the
+# latest commit has it.
+in_start = subprocess.run(["git", "-C", str(KIT), "cat-file", "-e", f"start:{places[folder]}"],
+                          stderr=subprocess.DEVNULL).returncode == 0
+subprocess.run(["git", "-C", str(KIT), "restore", f"--source={'start' if in_start else 'HEAD'}",
+                "--staged", "--worktree", "--", places[folder]], check=True)
 # Git leaves a folder your terminal is in (it says "Refusing to remove current working
 # directory"); start.py then empties it in place.
 subprocess.run(["git", "-C", str(KIT), "clean", "-ffdxq", "--", places[folder]], check=True,
