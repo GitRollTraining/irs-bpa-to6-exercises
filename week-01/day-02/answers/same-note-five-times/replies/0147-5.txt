@@ -1,0 +1,9 @@
+```json
+{
+  "tax_year": 2023,
+  "form": "Form 1040 (Schedule C)",
+  "issue": "Schedule C gross receipts are lower than the information returns on file",
+  "amount_in_question": 18400,
+  "next_action": "Follow up in 30 days (about 2026-11-19) on the letter requesting business records, which has already been sent."
+}
+```

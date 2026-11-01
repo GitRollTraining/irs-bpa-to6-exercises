@@ -1,0 +1,1 @@
+{"tax_year": "2023", "form": "Form 1040", "issue": "Return claims a dependent who also appears on another return for the same tax year (duplicate dependent claim)", "amount_in_question": "None stated", "next_action": "Request proof of residency for the dependent; follow up in 45 days"}

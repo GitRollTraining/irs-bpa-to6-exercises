@@ -1,3 +1,7 @@
-# Week 1, day 2
+# Day 2 exercises
 
-The day's notebook: [`week-01-day-02.ipynb`](week-01-day-02.ipynb)
+The day's notebook, with its reading and its exercises in the order of the slides: [`week-01-day-02.ipynb`](week-01-day-02.ipynb)
+
+1. [Send two notes five times each, and record what the note does not state](same-note-five-times/README.md). See the model sample its replies, and find values that the note does not state. Where: the folder `~/practice/week-01/day-02/same-note-five-times/lab`, in the day's notebook or in a terminal. `send_five.py` calls the model that the extractor calls. Use no other AI tool. Done when: from `lab`, `python3 ../check.py` prints a line that starts with `Done:`. Start: [`same-note-five-times/`](same-note-five-times/). Answer: [`answers/same-note-five-times/`](answers/same-note-five-times/).
+2. [Write the system prompt, and record three replies](system-prompt/README.md). Write the extractor's system prompt on purpose, and record its replies. Where: the folder `~/practice/week-01/day-02/system-prompt/lab`, in the day's notebook or in a terminal. `../record.py` calls the model that the extractor calls. Use no other AI tool. Done when: from `lab`, `python3 ../check.py` prints a line that starts with `Done:`. Start: [`system-prompt/`](system-prompt/). Answer: [`answers/system-prompt/`](answers/system-prompt/).
+3. [Choose a model and two levels, and record why](model-and-reasoning-level/README.md). Choose a model and a reasoning level for a task, and record the reason for each. Where: the folder `~/practice/week-01/day-02/model-and-reasoning-level/lab`, in VS Code. Do not use AI tools. Done when: from `lab`, `python3 ../check.py` prints a line that starts with `Done:`. Start: [`model-and-reasoning-level/`](model-and-reasoning-level/). Answer: [`answers/model-and-reasoning-level/`](answers/model-and-reasoning-level/).
